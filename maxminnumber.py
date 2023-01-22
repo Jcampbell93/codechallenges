@@ -1,0 +1,33 @@
+# Your task is to make two functions ( max and min, or maximum and minimum, etc.,
+# depending on the language ) that receive a list of integers as input,
+# and return the largest and lowest number in that list, respectively.
+#
+# Examples (Input -> Output)
+# * [4,6,2,1,9,63,-134,566]         -> max = 566, min = -134
+# * [-52, 56, 30, 29, -54, 0, -110] -> min = -110, max = 56
+# * [42, 54, 65, 87, 0]             -> min = 0, max = 87
+# * [5]                             -> min = 5, max = 5
+# Notes
+# You may consider that there will not be any empty arrays/vectors.
+
+test_array = [-52, 56, 30, 29, -54, 0, -110]
+
+
+def minimum(int_array):
+    smallest_number = int_array[0]
+    for entity in int_array:
+        if entity < smallest_number:
+            smallest_number = entity
+    return smallest_number
+
+
+def maximum(int_array):
+    biggest_number = int_array[0]
+    for entity in int_array:
+        if entity > biggest_number:
+            biggest_number = entity
+    return biggest_number
+
+
+print(minimum(test_array))
+print(maximum(test_array))
